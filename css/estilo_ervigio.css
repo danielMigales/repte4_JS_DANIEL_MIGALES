@@ -1,0 +1,155 @@
+input, body{
+	font-family: 'Montserrat', sans-serif;
+}
+body {
+	margin:auto;	
+	height:100%;
+	font-size:20px;
+}
+img{
+	max-width:100%;
+	vertical-align:top;
+}
+.flecha{
+	width:20%;	
+	cursor:pointer;
+	border-radius:50%;	
+	background-color:white;
+	border:13px solid crimson;
+	box-sizing:border-box;
+
+}
+.flecha:hover{
+	background-color:crimson;
+}
+#anterior{	
+	box-shadow:0 0 20px crimson inset;	
+	border-radius:50%;
+	border:10px solid black;
+	box-sizing:border-box;
+}
+#siguiente{
+	box-shadow:0 0 20px crimson inset;	
+	transform:rotate(180deg);
+	border-radius:50%;
+	border:10px solid black;
+	box-sizing:border-box;
+}
+.imagen{
+	position:relative;
+	flex:1;
+	margin:20px -30px 10px;
+	border:17px solid crimson;
+	padding:6px;
+	border-radius:50%;
+	background-color:white;
+	z-index:998;
+	box-shadow:0 0 50px crimson inset;	
+}
+.l1{
+	margin-top:11px;
+}
+#caja1{	
+	width:250px;
+	height:250px;
+	margin:auto;
+	border:13px solid crimson;	
+	padding:20px 20px;
+	border-radius:50%;
+	padding:30px;
+	position:absolute;
+	top:0;
+	bottom:30px;
+	left:0;
+	right:0;
+	box-shadow:0 0 50px crimson inset;	
+}
+#caja2{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	width:700px;
+	height:400px;
+	margin:auto;	
+	border-radius:9px;
+	position:absolute;
+	top:0;
+	bottom:30px;
+	left:0;
+	right:0;
+}
+.caja_boton{
+	margin-top:30px;
+	text-align:center;
+}
+input{
+	padding:7px;
+	border-radius:6px;
+	outline:none;
+	border:1px dotted crimson;
+	font-size:1em;
+	text-align:center;
+	font-weight:bold;
+	color:crimson;
+}
+::placeholder{
+	color:gray;
+}
+.linea {
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	margin-bottom:5px;
+}
+.linea label{	
+	text-align:center;
+	margin:5px auto 4px;
+}
+#boton_acceso{
+	background-color:crimson;
+	color:white;
+	outline:none;
+	border:1px solid crimson;
+	padding:8px 18px;
+	border-radius:5px;
+	font-size:0.9em;
+	cursor:pointer;	
+	box-shadow:0 0 10px white inset;
+}
+#boton_acceso:hover{
+	background-color:white;
+	color:crimson;
+}
+#numero{
+	color:crimson;
+	font-size:1.5em;
+	font-weight:bold;
+	position:absolute;
+	border-radius:50%;
+	border:12px solid crimson;
+	right:107px;
+	bottom:7px;
+	padding:11px;
+	z-index:999;
+	background-color:white;
+	width:49px;
+	height:49px;
+	text-align:center;
+	line-height:49px;
+	box-shadow:0 0 25px crimson inset;	
+}
+nav{
+	position:fixed;
+	top:10px;
+	left:10px;
+	display:flex;
+}
+.circulos{
+	width:8px;
+	height:8px;
+	border-radius:50%;
+	border:6px solid crimson;
+	margin:1px;
+	background-color:white;
+}
+}
