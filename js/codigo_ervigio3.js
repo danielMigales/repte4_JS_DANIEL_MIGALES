@@ -7,6 +7,10 @@ var total = 5;
 
 function inicio() {
 	// Inicialmente, al acceder directamente a la imagen 1, el botón de "imagen anterior" debe estar oculto (visibility:hidden), posteriormente cuando se avance a otra imagen siguiente vuelve a mostrarse (visility:visible)
+
+	//punto 12: inicialmente el boton de anterior no se visualiza
+	document.getElementsByClassName("flecha")[0].style.visibility = "hidden";
+
 	// Se indican todos los eventos que tiene la página		
 	document.getElementById("anterior").onclick = imagen_anterior;
 	document.getElementById("siguiente").onclick = imagen_siguiente;
@@ -16,6 +20,8 @@ function inicio() {
 	document.getElementsByClassName("circulos")[2].style.backgroundColor = "crimson";
 	document.getElementsByClassName("circulos")[0].onclick = acceder_parte1;
 	document.getElementsByClassName("circulos")[1].onclick = acceder_parte2;
+
+
 }
 
 function acceder_parte1() {
@@ -48,6 +54,11 @@ function imagen_anterior() {
 	// Al llegar a la primera imagen el botón de imagen anterior se oculta (visibility:hidden), posteriormente cuando se avance a otra imagen siguiente vuelve a mostrarse (visility:visible)
 	// Decrementa en 1 la variable imagen y actualiza todos los cambios		
 	imagen--;
+
+	//punto 13: cuando este la primera imagen el boton anterior no se visualiza.
+	if (imagen == 1) {
+		document.getElementsByClassName("flecha")[0].style.visibility = "hidden";
+	}
 	actualizar();
 }
 
@@ -55,6 +66,11 @@ function imagen_siguiente() {
 	// Al llegar a la última imagen el botón de imagen siguiente se oculta (visibility:hidden), posteriormente cuando se retroceda a otra imagen anterior vuelve a mostrarse (visility:visible)
 	// Incrementa en 1 la variable imagen y actualiza todos los cambios
 	imagen++;
+
+	//punto 14: cuando llegue a la ultima imagen el boton desaparece.
+	if (imagen == 5) {
+		document.getElementsByClassName("flecha")[1].style.visibility = "hidden";
+	}
 	actualizar();
 }
 
@@ -62,4 +78,13 @@ function actualizar() {
 	// Actualiza el número 1/7 en numero y actualiza la imagen
 	document.getElementById("numero").innerHTML = imagen + "/" + total;
 	document.getElementById("img").src = "img/producto" + imagen + ".png";
+
+	//puntos 13 y 14: aprovechando la funcion actualizar, esta comprueba en que numero de imagen esta y desoculta los botones.
+
+	if (imagen >= 2 && imagen <= 4) {
+		document.getElementsByClassName("flecha")[0].style.visibility = "visible";
+		document.getElementsByClassName("flecha")[1].style.visibility = "visible";
+	}
+
+
 }

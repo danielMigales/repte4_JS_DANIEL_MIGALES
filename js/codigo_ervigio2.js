@@ -45,15 +45,27 @@ function teclado(e) {
 
 function imagen_anterior() {
 	// Al llegar a la primera imagen y hacer clic en este botón se muestra la última
-	// Decrementa en 1 la variable imagen y actualiza todos los cambios		
+	// Decrementa en 1 la variable imagen y actualiza todos los cambios	
+
 	imagen--;
+	//punto 9:
+	if (imagen == 0) {
+		imagen = 4;
+	}
 	actualizar();
 }
 
 function imagen_siguiente() {
 	// Al llegar a la última imagen y hacer clic en este botón se muestra la primera
 	// Incrementa en 1 la variable imagen y actualiza todos los cambios
+
 	imagen++;
+	//punto 10:
+	if (imagen > 4) {
+		imagen = 1;
+	}
+
+
 	actualizar();
 }
 
