@@ -53,7 +53,11 @@ function teclado(e) {
 function imagen_anterior() {
 	// Al llegar a la primera imagen el botón de imagen anterior se oculta (visibility:hidden), posteriormente cuando se avance a otra imagen siguiente vuelve a mostrarse (visility:visible)
 	// Decrementa en 1 la variable imagen y actualiza todos los cambios		
-	imagen--;
+
+	//con este primer if, se delimita el paso de imagenes con el cursor. 
+	if (imagen >= 2 && imagen <= 5) {
+		imagen--;
+	}
 
 	//punto 13: cuando este la primera imagen el boton anterior no se visualiza.
 	if (imagen == 1) {
@@ -65,11 +69,16 @@ function imagen_anterior() {
 function imagen_siguiente() {
 	// Al llegar a la última imagen el botón de imagen siguiente se oculta (visibility:hidden), posteriormente cuando se retroceda a otra imagen anterior vuelve a mostrarse (visility:visible)
 	// Incrementa en 1 la variable imagen y actualiza todos los cambios
-	imagen++;
+
+	//con este primer if, se delimita el paso de imagenes con el cursor.
+	if (imagen >= 1 && imagen <= 4) {
+		imagen++;
+	}
 
 	//punto 14: cuando llegue a la ultima imagen el boton desaparece.
 	if (imagen == 5) {
 		document.getElementsByClassName("flecha")[1].style.visibility = "hidden";
+
 	}
 	actualizar();
 }
